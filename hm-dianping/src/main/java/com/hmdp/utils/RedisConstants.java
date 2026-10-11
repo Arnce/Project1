@@ -19,7 +19,10 @@ public class RedisConstants {
     public static final Long LOCK_SHOP_TTL = 10L;
 
     public static final String SECKILL_STOCK_KEY = "seckill:stock:";
-    public static final String STREAM_ORDER_KEY = "stream.orders";
+    /** Kafka下单主题（key为voucherId，同券消息进同一分区保证顺序） */
+    public static final String KAFKA_ORDER_TOPIC = "voucher.order";
+    /** 下单死信主题（消费重试3次仍失败的消息） */
+    public static final String KAFKA_ORDER_DLQ_TOPIC = "voucher.order.dlq";
     public static final String BLOG_LIKED_KEY = "blog:liked:";
     public static final String FEED_KEY = "feed:";
     public static final String SHOP_GEO_KEY = "shop:geo:";

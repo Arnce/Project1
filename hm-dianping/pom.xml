@@ -90,6 +90,11 @@
             <artifactId>redisson</artifactId>
             <version>3.13.6</version>
         </dependency>
+        <!--Kafka：异步下单消息队列-->
+        <dependency>
+            <groupId>org.springframework.kafka</groupId>
+            <artifactId>spring-kafka</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
